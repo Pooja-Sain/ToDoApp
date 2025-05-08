@@ -1,0 +1,11 @@
+.logo {
+  font-weight: 800;
+}
+
+input::placeholder {
+  color: #6c757d; /* Bootstrap's default */
+}
+
+.dark-placeholder::placeholder {
+  color: #ccc; /* Light gray for dark backgrounds */
+}
