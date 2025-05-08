@@ -33,8 +33,6 @@ function App() {
   ]);
   const [searchTerm, setSearchTerm] = useState("");
   const [theme, setTheme] = useState("light");
-  // const [newTaskTitle, setNewTaskTitle] = useState("");
-  const [newTaskDescription, setNewTaskDescription] = useState("");
   const handleSearch = (e) => {
     // console.log(e.target.value);
     setSearchTerm(e.target.value);
@@ -44,7 +42,7 @@ function App() {
       prevTasks.map((task) =>
         task.id === id && task.status === "not completed"
           ? { ...task, status: "completed" }
-          : task
+          : { ...task, status: "not completed" }
       )
     );
   }, []);
@@ -132,8 +130,8 @@ function App() {
             placeholder="Search Task"
             className={
               theme === "light"
-                ? "form-control bg-light text-dark"
-                : "form-control bg-dark text-light dark-placeholder"
+                ? "form-control bg-light light-input"
+                : "form-control bg-dark dark-input dark-placeholder"
             }
             aria-describedby="button-addon2"
           />
@@ -143,7 +141,7 @@ function App() {
             id="button-addon2"
             onClick={resetSearch}
           >
-            <span class="material-symbols-outlined">close</span>
+            <span className="material-symbols-outlined">close</span>
           </button>
         </div>
       </div>

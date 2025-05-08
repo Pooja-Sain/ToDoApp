@@ -2,10 +2,16 @@
   font-weight: 800;
 }
 
-input::placeholder {
+.light-input::placeholder {
   color: #6c757d; /* Bootstrap's default */
 }
 
-.dark-placeholder::placeholder {
+/* .dark-placeholder::placeholder {
+} */
+.dark-input::placeholder {
   color: #ccc; /* Light gray for dark backgrounds */
+}
+
+.light-input::placeholder {
+  color: #333;
 }
