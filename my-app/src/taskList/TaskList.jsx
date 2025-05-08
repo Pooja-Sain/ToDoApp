@@ -39,7 +39,9 @@ const TaskList = React.memo(({ tasks, onToggle, onDelete, theme }) => {
                 className="btn btn-success me-2"
                 onClick={() => onToggle(task.id)}
               >
-                Completed
+                {task.status === "completed"
+                  ? "mark not completed"
+                  : "mark completed"}
               </button>
               <button
                 type="button"
